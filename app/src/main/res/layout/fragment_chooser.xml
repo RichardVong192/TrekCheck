@@ -12,7 +12,7 @@
         android:layout_width="245dp"
         android:layout_height="128dp"
         android:layout_marginTop="32dp"
-        android:text="This is the home page"
+        android:text="HELLO WORLD THIS IS MY APPLICATION "
         app:layout_constraintBottom_toTopOf="@+id/buttonChoice1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.536"
