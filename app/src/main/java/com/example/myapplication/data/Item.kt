@@ -8,5 +8,5 @@ data class Item (
     @PrimaryKey(autoGenerate = true)
     val id: Int,
     val itemName: String,
-    val weight: Int,
+    val weight: Int
 )
