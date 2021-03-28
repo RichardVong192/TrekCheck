@@ -6,28 +6,6 @@
     app:startDestination="@id/ListFragment">
 
     <fragment
-        android:id="@+id/chooserFragment"
-        android:name="com.example.myapplication.chooserFragment"
-        android:label="fragment_chooser"
-        tools:layout="@layout/fragment_chooser" >
-        <action
-            android:id="@+id/action_chooserFragment_to_choice1Fragment"
-            app:destination="@id/choice1Fragment" />
-        <action
-            android:id="@+id/action_chooserFragment_to_choice2Fragment"
-            app:destination="@id/choice2Fragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/choice1Fragment"
-        android:name="com.example.myapplication.choice1Fragment"
-        android:label="fragment_choice1"
-        tools:layout="@layout/fragment_choice1" />
-    <fragment
-        android:id="@+id/choice2Fragment"
-        android:name="com.example.myapplication.choice2Fragment"
-        android:label="fragment_choice2"
-        tools:layout="@layout/fragment_choice2" />
-    <fragment
         android:id="@+id/addFragment"
         android:name="com.example.myapplication.fragments.add.AddFragment"
         android:label="fragment_add"
@@ -44,5 +22,20 @@
         <action
             android:id="@+id/action_listFragment_to_addFragment"
             app:destination="@id/addFragment" />
+        <action
+            android:id="@+id/action_ListFragment_to_updateFragment"
+            app:destination="@id/updateFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateFragment"
+        android:name="com.example.myapplication.fragments.update.UpdateFragment"
+        android:label="fragment_update"
+        tools:layout="@layout/fragment_update" >
+        <action
+            android:id="@+id/action_updateFragment_to_ListFragment"
+            app:destination="@id/ListFragment" />
+        <argument
+            android:name="currentItem"
+            app:argType="com.example.myapplication.model.Item" />
     </fragment>
 </navigation>

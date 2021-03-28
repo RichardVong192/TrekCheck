@@ -8,12 +8,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.appcompat.view.menu.MenuView
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.myapplication.R
-import com.example.myapplication.data.Item
-import com.example.myapplication.data.ItemViewModel
+import com.example.myapplication.model.Item
+import com.example.myapplication.viewmodel.ItemViewModel
 import kotlinx.android.synthetic.main.fragment_add.*
 import kotlinx.android.synthetic.main.fragment_add.view.*
 
@@ -42,7 +41,11 @@ class AddFragment : Fragment() {
 
         if (inputCheck(itemName, itemWeight)) {
             // Create user object
-            val item = Item(0, itemName, Integer.parseInt(itemWeight.toString()))
+            val item = Item(
+                0,
+                itemName,
+                Integer.parseInt(itemWeight.toString())
+            )
             // Add Data to Database
             mItemViewModel.addItem(item)
             Toast.makeText(requireContext(), "Item successfully added!", Toast.LENGTH_LONG).show()
@@ -54,6 +57,6 @@ class AddFragment : Fragment() {
     }
 
     private fun inputCheck(itemName: String, itemWeight: Editable): Boolean {
-        return !(TextUtils.isEmpty(itemName) && itemWeight.isEmpty())
+        return !(TextUtils.isEmpty(itemName) || itemWeight.isEmpty())
     }
 }
