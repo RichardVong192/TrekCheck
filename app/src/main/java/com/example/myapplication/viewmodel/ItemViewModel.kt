@@ -34,4 +34,18 @@ class ItemViewModel(application: Application): AndroidViewModel(application) {
             repository.updateItem(item)
         }
     }
+
+    fun deleteItem(item: Item){
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.deleteItem(item)
+        }
+    }
+
+    fun deleteAllItems(){
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.deleteAllItems()
+        }
+    }
+
+
 }

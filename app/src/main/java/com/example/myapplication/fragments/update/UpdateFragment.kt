@@ -1,12 +1,11 @@
 package com.example.myapplication.fragments.update
 
+import android.app.AlertDialog
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextUtils
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
@@ -40,6 +39,9 @@ class UpdateFragment : Fragment() {
             updateItem()
         }
 
+        //Add menu
+        setHasOptionsMenu(true) //add menu to action bar
+
         return view
     }
 
@@ -61,6 +63,32 @@ class UpdateFragment : Fragment() {
 
     private fun inputCheck(itemName: String, itemWeight: Editable): Boolean {
         return !(TextUtils.isEmpty(itemName) || itemWeight.isEmpty())
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.delete_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == R.id.menu_delete) {
+            deleteItem()
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+    private fun deleteItem() {
+        val builder = AlertDialog.Builder(requireContext())
+        builder.setPositiveButton("Yes") {_, _ ->
+            mItemViewModel.deleteItem(args.currentItem)
+            Toast.makeText(requireContext(), "Successfully deleted: ${args.currentItem.itemName}", Toast.LENGTH_SHORT).show()
+            //Navigate Back
+            findNavController().navigate(R.id.action_updateFragment_to_ListFragment)
+
+        }
+        builder.setNegativeButton("No") {_, _ ->}
+        builder.setTitle("Delete ${args.currentItem.itemName}?")
+        builder.setMessage("Are you sure you want to delete ${args.currentItem.itemName}?")
+        builder.create().show()
     }
 
 }
