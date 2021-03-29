@@ -47,7 +47,7 @@ class UpdateFragment : Fragment() {
 
     private fun updateItem() {
         val itemName = updateItemName_et.text.toString()
-        val itemWeight = Integer.parseInt((updateItemWeight_et.text.toString()))
+        val itemWeight = updateItemWeight_et.toString().toFloat()
 
         if (inputCheck(itemName, updateItemWeight_et.text)) {
             //Create object

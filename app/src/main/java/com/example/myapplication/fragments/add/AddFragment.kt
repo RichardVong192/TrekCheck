@@ -40,11 +40,12 @@ class AddFragment : Fragment() {
         val itemWeight = addItemWeight_et.text
 
         if (inputCheck(itemName, itemWeight)) {
-            // Create user object
+            // Create item object
             val item = Item(
                 0,
                 itemName,
-                Integer.parseInt(itemWeight.toString())
+                itemWeight.toString().toFloat()
+                
             )
             // Add Data to Database
             mItemViewModel.addItem(item)
