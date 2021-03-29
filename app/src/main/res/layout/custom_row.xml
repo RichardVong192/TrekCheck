@@ -32,8 +32,8 @@
 
     <CheckBox
         android:id="@+id/checkBox2"
-        android:layout_width="47dp"
-        android:layout_height="28dp"
+        android:layout_width="39dp"
+        android:layout_height="39dp"
         android:persistent="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
