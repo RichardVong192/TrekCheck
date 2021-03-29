@@ -47,11 +47,13 @@ class UpdateFragment : Fragment() {
 
     private fun updateItem() {
         val itemName = updateItemName_et.text.toString()
-        val itemWeight = updateItemWeight_et.toString().toFloat()
+        val itemWeight = updateItemWeight_et.text
 
         if (inputCheck(itemName, updateItemWeight_et.text)) {
             //Create object
-            val updatedItem = Item(args.currentItem.id, itemName, itemWeight)
+            val updatedItem = Item(args.currentItem.id,
+                    itemName,
+                    itemWeight.toString().toFloat())
             mItemViewModel.updateItem(updatedItem)
             Toast.makeText(requireContext(), "Item successfully updated!", Toast.LENGTH_LONG).show()
             //Navigate back
