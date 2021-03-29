@@ -27,7 +27,7 @@ class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val currentItem = itemList[position]
-        holder.itemView.id_txt.text = currentItem.id.toString()
+//        holder.itemView.id_txt.text = currentItem.id.toString()
         holder.itemView.itemName_txt.text = currentItem.itemName
         holder.itemView.itemWeight_txt.text = currentItem.weight.toString()
 
