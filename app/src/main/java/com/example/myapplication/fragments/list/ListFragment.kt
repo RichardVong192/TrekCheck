@@ -1,6 +1,7 @@
 package com.example.myapplication.fragments.list
 
 import android.app.AlertDialog
+import android.content.Intent
 import android.os.Bundle
 import android.view.*
 import android.widget.Toast
@@ -54,8 +55,18 @@ class ListFragment : Fragment() {
         if (item.itemId == R.id.menu_delete) {
             deleteAllItems()
         }
+        else if (item.itemId == R.id.menu_share) {
+            val sendIntent: Intent = Intent().apply {
+                action = Intent.ACTION_SEND
+                putExtra(Intent.EXTRA_TEXT, "Hey! I'm going hiking soon!")
+                type = "text/plain"
+            }
+            val shareIntent = Intent.createChooser(sendIntent, null)
+            startActivity(shareIntent)
+        }
         return super.onOptionsItemSelected(item)
     }
+
 
     private fun deleteAllItems() {
         val builder = AlertDialog.Builder(requireContext())
