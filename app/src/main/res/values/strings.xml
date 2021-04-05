@@ -7,7 +7,7 @@
     <string name="item_weight">Item Weight</string>
     <string name="add">Add</string>
     <string name="hat">Hat</string>
-    <string name="_0_01">(0.01)</string>
+    <string name="_0_01">0.01</string>
     <string name="todo">TODO</string>
     <string name="update">Update</string>
     <string name="update_an_item">Update an Item</string>

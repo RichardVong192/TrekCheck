@@ -4,7 +4,10 @@
     android:id="@+id/rowLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="16sp">
+    android:paddingBottom="8dp"
+    android:paddingTop="8dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
 
     <TextView
         android:id="@+id/itemName_txt"
@@ -12,6 +15,9 @@
         android:layout_height="wrap_content"
         android:text="@string/hat"
         android:textSize="24sp"
+        android:maxLength="10"
+        android:ellipsize="end"
+        android:singleLine="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -24,6 +30,7 @@
         android:layout_marginEnd="40dp"
         android:text="@string/_0_01"
         android:textSize="24sp"
+        android:maxLength="5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/checkBox2"
         app:layout_constraintTop_toTopOf="parent"
