@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">UwU</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="app_name">TrekCheck</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="add_an_item">Add an Item</string>
     <string name="item_name">Item Name</string>

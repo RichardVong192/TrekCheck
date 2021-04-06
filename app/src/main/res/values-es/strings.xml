@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">EmigrarControlar</string>
+    <string name="hello_blank_fragment">Hola fragmento negro</string>
+    <string name="add_an_item">Agregar un artículo</string>
+    <string name="item_name">Nombre del árticulo</string>
+    <string name="item_weight">Peso del artículo</string>
+    <string name="add">Agregar</string>
+    <string name="hat">Sombrero</string>
+    <string name="_0_01">0.01</string>
+    <string name="todo">QUE HACER</string>
+    <string name="update">Actualizar</string>
+    <string name="update_an_item">Actualizar un artículo</string>
+    <string name="delete">Eliminar</string>
+    <string name="share">Cuota</string>
+    <string name="kg">kg</string>
+</resources>
