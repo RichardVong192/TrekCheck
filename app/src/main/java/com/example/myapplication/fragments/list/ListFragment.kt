@@ -59,7 +59,7 @@ class ListFragment : Fragment() {
         else if (item.itemId == R.id.menu_share) {
             val sendIntent: Intent = Intent().apply {
                 action = Intent.ACTION_SEND
-                putExtra(Intent.EXTRA_TEXT, "Hey! I'm going hiking soon!")
+                putExtra(Intent.EXTRA_TEXT, "Hey! I'm going hiking soon! Want to Come?")
                 type = "text/plain"
             }
             val shareIntent = Intent.createChooser(sendIntent, null)
