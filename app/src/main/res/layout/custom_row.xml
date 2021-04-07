@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:text="@string/hat"
         android:textSize="24sp"
-        android:maxLength="10"
+        android:maxLength="15"
         android:ellipsize="end"
         android:singleLine="true"
         app:layout_constraintBottom_toBottomOf="parent"
